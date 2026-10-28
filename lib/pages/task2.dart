@@ -51,18 +51,98 @@ class Task2 extends StatelessWidget {
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
             child: Row(
               children: [
-                Image.network(
-                  dumor['imageUrl'],
-                  width: 150,
-                  height: 110,
-                  fit: BoxFit.cover,
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(16),
+                  child: Image.network(
+                    dumor['imageUrl'],
+                    width: 150,
+                    height: 110,
+                    fit: BoxFit.cover,
+                  ),
                 ),
-
                 SizedBox(width: 15),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [Text(dumor['category'])],
+                    children: [
+                      Text(
+                        '#${dumor['category']}',
+                        style: TextStyle(color: Colors.orange, fontSize: 13),
+                      ),
+                      SizedBox(height: 4),
+                      Text(
+                        dumor['title'],
+                        style: TextStyle(color: Colors.black, fontSize: 15),
+                      ),
+                      SizedBox(height: 4),
+                      Text(
+                        'ID: ${dumor['id']}',
+                        style: TextStyle(color: Colors.grey, fontSize: 12),
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            '\$${dumor['price']}',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 32,
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.deepOrange,
+                                elevation: 0,
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 16,
+                                ),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                              ),
+                              child: const Text(
+                                'Done',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ),
+
+                          const SizedBox(width: 8),
+
+                          SizedBox(
+                            height: 32,
+                            child: OutlinedButton(
+                              onPressed: () {},
+                              style: OutlinedButton.styleFrom(
+                                side: const BorderSide(
+                                  color: Colors.deepOrange,
+                                ),
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 12,
+                                ),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                              ),
+                              child: const Text(
+                                'Cancel',
+                                style: TextStyle(
+                                  color: Colors.deepOrange,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
               ],
