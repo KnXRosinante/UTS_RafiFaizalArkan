@@ -26,6 +26,31 @@ class task1 extends StatelessWidget {
                     ),
                   ),
                 ),
+                Expanded(
+                  child: Column(
+                    children: [
+                      Text(
+                        'All your favorites',
+                        style: TextStyle(
+                          color: Colors.blueGrey[900],
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      
+                      Text(
+                        'Get all your loved foods in one once place, you just place the one we do the rest',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 14.0,
+                          fontWeight: FontWeight.normal,
+                          color: Colors.blueGrey[400],
+                          height: 1.5,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
