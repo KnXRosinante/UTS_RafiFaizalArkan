@@ -37,7 +37,9 @@ class task1 extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      
+
+                      SizedBox(height: 25.0),
+
                       Text(
                         'Get all your loved foods in one once place, you just place the one we do the rest',
                         textAlign: TextAlign.center,
@@ -49,6 +51,41 @@ class task1 extends StatelessWidget {
                         ),
                       ),
                     ],
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 100,
+                    vertical: 14,
+                  ),
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: Colors.deepOrange,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: const Text(
+                    'NEXT',
+                    style: TextStyle(
+                      fontSize: 15.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      letterSpacing: 1.2,
+                    ),
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 100,
+                    vertical: 14,
+                  ),
+                  alignment: Alignment.center,
+                  child: const Text(
+                    'Skip',
+                    style: TextStyle(
+                      fontSize: 14.0,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.blueGrey,
+                    ),
                   ),
                 ),
               ],
